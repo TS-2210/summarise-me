@@ -1,0 +1,18 @@
+{
+  "manifest_version": 3,
+  "name": "SummariseMe",
+  "version": "1.0",
+  "description": "Intelligent page summariser where you can choose the intent behind the summary",
+  "permissions": ["activeTab", "scripting"],
+  "host_permissions": ["http://localhost:8000/*"],
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "SummariseMe"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"]
+    }
+  ]
+}
